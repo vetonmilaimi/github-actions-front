@@ -12,12 +12,13 @@ jobs:
         run: |
           echo "Build Web App"
           sleep 10s
-      - uses: convictional/trigger-workflow-and-wait@v1.3.0
+      - uses: convictional/trigger-workflow-and-wait@v1.6.1
         with:
           owner: vetonmilaimi
           repo: github-actions-back
           github-token: ${{ secrets.G_ACCESS_TOKEN }}
           workflow_file_name: master.yml
+          trigger_workflow: true
       - name: Deploy Web App
         run: |
           echo "Deploy Web App"
