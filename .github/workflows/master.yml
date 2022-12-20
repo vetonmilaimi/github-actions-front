@@ -18,12 +18,6 @@ jobs:
           repo: github-actions-back
           github-token: ${{ secrets.G_ACCESS_TOKEN }}
           workflow_file_name: master.yml
-          trigger_workflow: true
-          ref: release-branch
-          wait_interval: 10
-          client_payload: '{}'
-          propagate_failure: false
-          wait_workflow: true
       - name: Deploy Web App
         run: |
           echo "Deploy Web App"
