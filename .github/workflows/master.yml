@@ -16,7 +16,7 @@ jobs:
         with:
           owner: vetonmilaimi
           repo: github-actions-back
-          github-token: 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
+          github_token: ${{ secrets.G_ACCESS_TOKEN }}
           workflow_file_name: master.yml
       - name: Deploy Web App
         run: |
